@@ -13,13 +13,14 @@ File or Folder | Purpose
 `readme.md` | this getting started guide
 
 
-## Next Steps
+## To run locally
 
-- Open a new terminal and run `cds watch` 
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
+- Ensure that you have services `extBook-xsuaa`, and `extBook-destination` exists in BTP subaccount. Also corresponding Keys `extBook-xsuaa-key`, `extBook-destination-key` are available within those instances.
 
+- Open a new terminal and run following commands (one-time)
+`cds bind xsuaa -2 extBook-xsuaa:extBook-xsuaa-key`  
+`cds bind destination -2 extBook-destination:extBook-destination-key`
 
-## Learn More
+- Run the app using command
+`cf watch --profile hybrid`
 
-Learn more at https://cap.cloud.sap/docs/get-started/.
